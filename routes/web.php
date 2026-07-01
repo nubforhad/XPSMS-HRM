@@ -3,6 +3,15 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\BranchController;
+use App\Http\Controllers\CompanyController;
+
+Route::middleware(['auth'])->group(function () {
+
+    Route::resource('company', CompanyController::class);
+    Route::resource('branch', BranchController::class);
+
+});
 
 Route::get('/', function () {
     return view('welcome');

@@ -18,7 +18,7 @@
         <hr class="text-secondary">
         <li class="menu-title text-white px-3 mt-2">HR MANAGEMENT</li>
 
-        <li><a href="#" class="sidebar-link"><i class="bi bi-building"></i><span>Company</span></a></li>
+        <li><a href="{{ route('company.index') }}" class="sidebar-link"><i class="bi bi-building"></i><span>Company</span></a></li>
         <li><a href="#" class="sidebar-link"><i class="bi bi-diagram-3"></i><span>Branch</span></a></li>
         <li><a href="#" class="sidebar-link"><i class="bi bi-collection"></i><span>Department</span></a></li>
         <li><a href="#" class="sidebar-link"><i class="bi bi-person-badge"></i><span>Designation</span></a></li>
