@@ -6,12 +6,14 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BranchController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\DesignationController;
 
 Route::middleware(['auth'])->group(function () {
 
     Route::resource('company', CompanyController::class);
     Route::resource('branch', BranchController::class);
      Route::resource('department', DepartmentController::class);
+     Route::resource('designation', DesignationController::class);
 
 });
 

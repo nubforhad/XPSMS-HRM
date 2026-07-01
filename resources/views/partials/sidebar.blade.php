@@ -20,8 +20,8 @@
 
         <li><a href="{{ route('company.index') }}" class="sidebar-link"><i class="bi bi-building"></i><span>Company</span></a></li>
         <li><a href="{{ route('branch.index') }}" class="sidebar-link"><i class="bi bi-diagram-3"></i><span>Branch</span></a></li>
-        <li><a href="#" class="sidebar-link"><i class="bi bi-collection"></i><span>Department</span></a></li>
-        <li><a href="#" class="sidebar-link"><i class="bi bi-person-badge"></i><span>Designation</span></a></li>
+        <li><a href="{{ route('department.index') }}" class="sidebar-link"><i class="bi bi-collection"></i><span>Department</span></a></li>
+        <li><a href="{{ route('designation.index') }}" class="sidebar-link"><i class="bi bi-person-badge"></i><span>Designation</span></a></li>
         <li><a href="#" class="sidebar-link"><i class="bi bi-people"></i><span>Employee</span></a></li>
 
         <hr class="text-secondary">

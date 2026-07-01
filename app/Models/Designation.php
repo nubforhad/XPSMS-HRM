@@ -4,12 +4,14 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Department extends Model
+class Designation extends Model
 {
     protected $fillable = [
         'company_id',
         'branch_id',
+        'department_id',
         'name',
+        'level',
         'status',
     ];
 
@@ -22,8 +24,9 @@ class Department extends Model
     {
         return $this->belongsTo(Branch::class);
     }
-    public function designations()
+
+    public function department()
     {
-        return $this->hasMany(Designation::class);
+        return $this->belongsTo(Department::class);
     }
 }

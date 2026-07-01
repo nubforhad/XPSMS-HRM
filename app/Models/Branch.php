@@ -23,4 +23,11 @@ class Branch extends Model
     {
         return $this->hasMany(Department::class);
     }
+    public function designations()
+    {
+        return $this->hasMany(Designation::class);
+    }
+
+
+    
 }
