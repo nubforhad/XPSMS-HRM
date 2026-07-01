@@ -7,13 +7,15 @@ use App\Http\Controllers\BranchController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\DesignationController;
+use App\Http\Controllers\EmployeeController;
 
 Route::middleware(['auth'])->group(function () {
 
     Route::resource('company', CompanyController::class);
     Route::resource('branch', BranchController::class);
-     Route::resource('department', DepartmentController::class);
-     Route::resource('designation', DesignationController::class);
+    Route::resource('department', DepartmentController::class);
+    Route::resource('designation', DesignationController::class);
+    Route::resource('employee', EmployeeController::class);
 
 });
 
