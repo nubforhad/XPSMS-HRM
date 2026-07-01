@@ -1,17 +1,15 @@
 <?php
 
-namespace App\Models;
+ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Branch extends Model
+class Department extends Model
 {
     protected $fillable = [
         'company_id',
+        'branch_id',
         'name',
-        'phone',
-        'email',
-        'address',
         'status',
     ];
 
@@ -19,8 +17,9 @@ class Branch extends Model
     {
         return $this->belongsTo(Company::class);
     }
-    public function departments()
+
+    public function branch()
     {
-        return $this->hasMany(Department::class);
+        return $this->belongsTo(Branch::class);
     }
 }
