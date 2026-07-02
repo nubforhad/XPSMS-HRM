@@ -11,7 +11,9 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\LeaveTypeController;
 use App\Http\Controllers\LeaveController;
+use App\Http\Controllers\PayrollController;
 
+ 
  
 
  
@@ -64,6 +66,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/reject/{id}', [LeaveController::class,'reject'])->name('leave.reject');
 
     Route::get('/delete/{id}', [LeaveController::class,'destroy'])->name('leave.delete');
+
+    Route::get('/payroll', [PayrollController::class,'index'])->name('payroll.index');
+
+    Route::post('/payroll/generate', [PayrollController::class,'generate'])->name('payroll.generate');
 
 });
 
