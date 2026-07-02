@@ -10,7 +10,11 @@ use App\Http\Controllers\DesignationController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\LeaveTypeController;
+use App\Http\Controllers\LeaveController;
 
+ 
+
+ 
  
 
  
@@ -52,6 +56,14 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/leave-type/delete/{id}', [LeaveTypeController::class, 'destroy'])
         ->name('leave.type.delete');
+    // leave route 
+    Route::resource('/leave', LeaveController::class);
+        // ✅ THESE MISSING ROUTES (ADD THIS)
+    Route::get('/approve/{id}', [LeaveController::class,'approve'])->name('leave.approve');
+
+    Route::get('/reject/{id}', [LeaveController::class,'reject'])->name('leave.reject');
+
+    Route::get('/delete/{id}', [LeaveController::class,'destroy'])->name('leave.delete');
 
 });
 
