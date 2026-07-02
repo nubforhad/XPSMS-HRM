@@ -72,6 +72,12 @@ class LeaveController extends Controller
 
         return back()->with('success','Leave Rejected');
     }
+public function destroy($id)
+{
+    $leave = Leave::findOrFail($id);
+    $leave->delete();
 
+    return back()->with('success', 'Leave deleted successfully');
+}
 
 }

@@ -3,7 +3,7 @@
 @section('title','Leave Management')
 
 @section('content')
-
+ 
 <div class="container">
 
     <div class="d-flex justify-content-between align-items-center mb-3">
@@ -86,13 +86,13 @@
 
                                 @endif
 
-                                <a href="{{ route('leave.delete',$leave->id) }}"
-                                   class="btn btn-dark btn-sm"
-                                   onclick="return confirm('Are you sure?')">
+                                <a href="javascript:void(0)"
+                                    class="btn btn-dark btn-sm"
+                                    onclick="confirmDelete('{{ route('leave.delete',$leave->id) }}')">
 
-                                    Delete
+                                        Delete
 
-                                </a>
+                                    </a>
 
                             </td>
 
@@ -129,3 +129,32 @@
 </div>
 
 @endsection
+
+@push('scripts')
+@if(session('success'))
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: @json(session('success')),
+            timer: 2000,
+            showConfirmButton: false
+        });
+    });
+</script>
+@endif
+
+
+@if(session('error'))
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: @json(session('error'))
+        });
+    });
+</script>
+@endif
+@endpush
