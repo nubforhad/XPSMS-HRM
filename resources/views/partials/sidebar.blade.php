@@ -1,51 +1,74 @@
-<div class="sidebar-wrapper">
+<div class="sidebar-wrapper" style="background:inherit; min-height:100vh; padding-bottom:20px;">
 
-    <div class="sidebar-logo text-center py-3 border-bottom border-secondary">
-        <h4 class="text-white m-0">
-            <i class="bi bi-speedometer2"></i> XPSMS
+    <div class="sidebar-logo text-center py-3 border-bottom border-secondary"
+         style="border-bottom:1px solid rgba(255,255,255,0.15) !important; padding:18px 10px !important;">
+        <h4 class="text-white m-0" style="color:#ffffff !important; font-weight:700 !important; letter-spacing:1px !important;">
+            <i class="bi bi-speedometer2" style="color:#4fd1c5 !important; margin-right:8px !important;"></i> XPSMS
         </h4>
-        <small class="text-muted">HRM ERP</small>
+        <small class="text-muted" style="color:#9aa5b1 !important; font-size:12px !important;">HRM ERP</small>
     </div>
 
-    <ul class="sidebar-menu list-unstyled mt-3">
+    <ul class="sidebar-menu list-unstyled mt-3" style="padding:0 10px !important; margin-top:15px !important;">
+
         <li>
-            <a href="{{ route('dashboard') }}" class="sidebar-link">
-                <i class="bi bi-house-door"></i>
+            <a href="{{ route('dashboard') }}" class="sidebar-link"
+               style="display:flex !important; align-items:center !important; gap:10px !important; color:#d1d5db !important; text-decoration:none !important; padding:10px 14px !important; border-radius:8px !important; margin-bottom:4px !important; font-size:14.5px !important; transition:all 0.2s ease !important;"
+               onmouseover="this.style.background='#4fd1c5'; this.style.color='#0f172a';"
+               onmouseout="this.style.background='transparent'; this.style.color='#d1d5db';">
+                <i class="bi bi-house-door" style="font-size:16px !important; width:18px !important; text-align:center !important;"></i>
                 <span>Dashboard</span>
             </a>
         </li>
 
-        <hr class="text-secondary">
-        <li class="menu-title text-white px-3 mt-2">HR MANAGEMENT</li>
+        <hr class="text-secondary" style="border-color:rgba(255,255,255,0.12) !important; margin:14px 0 !important;">
+        <li class="menu-title text-white px-3 mt-2"
+            style="color:#8b95a5 !important; font-size:11px !important; font-weight:700 !important; letter-spacing:1.2px !important; margin:10px 0 8px 4px !important; text-transform:uppercase !important;">
+            HR MANAGEMENT
+        </li>
 
-        <li><a href="{{ route('company.index') }}" class="sidebar-link"><i class="bi bi-building"></i><span>Company</span></a></li>
-        <li><a href="{{ route('branch.index') }}" class="sidebar-link"><i class="bi bi-diagram-3"></i><span>Branch</span></a></li>
-        <li><a href="{{ route('department.index') }}" class="sidebar-link"><i class="bi bi-collection"></i><span>Department</span></a></li>
-        <li><a href="{{ route('designation.index') }}" class="sidebar-link"><i class="bi bi-person-badge"></i><span>Designation</span></a></li>
-        <li><a href="#" class="sidebar-link"><i class="bi bi-people"></i><span>Employee</span></a></li>
+        <li><a href="{{ route('company.index') }}" class="sidebar-link" style="display:flex !important; align-items:center !important; gap:10px !important; color:#d1d5db !important; text-decoration:none !important; padding:10px 14px !important; border-radius:8px !important; margin-bottom:4px !important; font-size:14.5px !important; transition:all 0.2s ease !important;" onmouseover="this.style.background='#4fd1c5'; this.style.color='#0f172a';" onmouseout="this.style.background='transparent'; this.style.color='#d1d5db';"><i class="bi bi-building" style="font-size:16px !important; width:18px !important; text-align:center !important;"></i><span>Company</span></a></li>
 
-        <hr class="text-secondary">
-        <li class="menu-title text-white px-3 mt-2">ATTENDANCE</li>
+        <li><a href="{{ route('branch.index') }}" class="sidebar-link" style="display:flex !important; align-items:center !important; gap:10px !important; color:#d1d5db !important; text-decoration:none !important; padding:10px 14px !important; border-radius:8px !important; margin-bottom:4px !important; font-size:14.5px !important; transition:all 0.2s ease !important;" onmouseover="this.style.background='#4fd1c5'; this.style.color='#0f172a';" onmouseout="this.style.background='transparent'; this.style.color='#d1d5db';"><i class="bi bi-diagram-3" style="font-size:16px !important; width:18px !important; text-align:center !important;"></i><span>Branch</span></a></li>
 
-        <li><a href="#" class="sidebar-link"><i class="bi bi-fingerprint"></i><span>Attendance</span></a></li>
-        <li><a href="#" class="sidebar-link"><i class="bi bi-clock"></i><span>Shift</span></a></li>
-        <li><a href="#" class="sidebar-link"><i class="bi bi-cpu"></i><span>Device</span></a></li>
-        <li><a href="#" class="sidebar-link"><i class="bi bi-calendar-check"></i><span>Leave</span></a></li>
-        <li><a href="#" class="sidebar-link"><i class="bi bi-calendar-event"></i><span>Holiday</span></a></li>
+        <li><a href="{{ route('department.index') }}" class="sidebar-link" style="display:flex !important; align-items:center !important; gap:10px !important; color:#d1d5db !important; text-decoration:none !important; padding:10px 14px !important; border-radius:8px !important; margin-bottom:4px !important; font-size:14.5px !important; transition:all 0.2s ease !important;" onmouseover="this.style.background='#4fd1c5'; this.style.color='#0f172a';" onmouseout="this.style.background='transparent'; this.style.color='#d1d5db';"><i class="bi bi-collection" style="font-size:16px !important; width:18px !important; text-align:center !important;"></i><span>Department</span></a></li>
 
-        <hr class="text-secondary">
-        <li class="menu-title text-white px-3 mt-2">REPORTS</li>
+        <li><a href="{{ route('designation.index') }}" class="sidebar-link" style="display:flex !important; align-items:center !important; gap:10px !important; color:#d1d5db !important; text-decoration:none !important; padding:10px 14px !important; border-radius:8px !important; margin-bottom:4px !important; font-size:14.5px !important; transition:all 0.2s ease !important;" onmouseover="this.style.background='#4fd1c5'; this.style.color='#0f172a';" onmouseout="this.style.background='transparent'; this.style.color='#d1d5db';"><i class="bi bi-person-badge" style="font-size:16px !important; width:18px !important; text-align:center !important;"></i><span>Designation</span></a></li>
 
-        <li><a href="#" class="sidebar-link"><i class="bi bi-bar-chart"></i><span>Daily Report</span></a></li>
-        <li><a href="#" class="sidebar-link"><i class="bi bi-calendar2-month"></i><span>Monthly Report</span></a></li>
-        <li><a href="#" class="sidebar-link"><i class="bi bi-exclamation-triangle"></i><span>Late Report</span></a></li>
+        <li><a href="{{ route('employee.index') }}" class="sidebar-link" style="display:flex !important; align-items:center !important; gap:10px !important; color:#d1d5db !important; text-decoration:none !important; padding:10px 14px !important; border-radius:8px !important; margin-bottom:4px !important; font-size:14.5px !important; transition:all 0.2s ease !important;" onmouseover="this.style.background='#4fd1c5'; this.style.color='#0f172a';" onmouseout="this.style.background='transparent'; this.style.color='#d1d5db';"><i class="bi bi-people" style="font-size:16px !important; width:18px !important; text-align:center !important;"></i><span>Employee</span></a></li>
 
-        <hr class="text-secondary">
+        <hr class="text-secondary" style="border-color:rgba(255,255,255,0.12) !important; margin:14px 0 !important;">
+        <li class="menu-title text-white px-3 mt-2" style="color:#8b95a5 !important; font-size:11px !important; font-weight:700 !important; letter-spacing:1.2px !important; margin:10px 0 8px 4px !important; text-transform:uppercase !important;">ATTENDANCE</li>
 
-        <li><a href="#" class="sidebar-link"><i class="bi bi-gear"></i><span>Settings</span></a></li>
+        <li><a href="{{ route('attendance.index') }}" class="sidebar-link" style="display:flex !important; align-items:center !important; gap:10px !important; color:#d1d5db !important; text-decoration:none !important; padding:10px 14px !important; border-radius:8px !important; margin-bottom:4px !important; font-size:14.5px !important; transition:all 0.2s ease !important;" onmouseover="this.style.background='#4fd1c5'; this.style.color='#0f172a';" onmouseout="this.style.background='transparent'; this.style.color='#d1d5db';"><i class="bi bi-fingerprint" style="font-size:16px !important; width:18px !important; text-align:center !important;"></i><span>Attendance</span></a></li>
+
+        <li><a href="#" class="sidebar-link" style="display:flex !important; align-items:center !important; gap:10px !important; color:#d1d5db !important; text-decoration:none !important; padding:10px 14px !important; border-radius:8px !important; margin-bottom:4px !important; font-size:14.5px !important; transition:all 0.2s ease !important;" onmouseover="this.style.background='#4fd1c5'; this.style.color='#0f172a';" onmouseout="this.style.background='transparent'; this.style.color='#d1d5db';"><i class="bi bi-clock" style="font-size:16px !important; width:18px !important; text-align:center !important;"></i><span>Shift</span></a></li>
+
+        <li><a href="#" class="sidebar-link" style="display:flex !important; align-items:center !important; gap:10px !important; color:#d1d5db !important; text-decoration:none !important; padding:10px 14px !important; border-radius:8px !important; margin-bottom:4px !important; font-size:14.5px !important; transition:all 0.2s ease !important;" onmouseover="this.style.background='#4fd1c5'; this.style.color='#0f172a';" onmouseout="this.style.background='transparent'; this.style.color='#d1d5db';"><i class="bi bi-cpu" style="font-size:16px !important; width:18px !important; text-align:center !important;"></i><span>Device</span></a></li>
+
+        <li><a href="{{ route('leave.type.index') }}" class="sidebar-link" style="display:flex !important; align-items:center !important; gap:10px !important; color:#d1d5db !important; text-decoration:none !important; padding:10px 14px !important; border-radius:8px !important; margin-bottom:4px !important; font-size:14.5px !important; transition:all 0.2s ease !important;" onmouseover="this.style.background='#4fd1c5'; this.style.color='#0f172a';" onmouseout="this.style.background='transparent'; this.style.color='#d1d5db';"><i class="bi bi-calendar-check" style="font-size:16px !important; width:18px !important; text-align:center !important;"></i><span>Leave Type</span></a></li>
+        <li><a href="#" class="sidebar-link" style="display:flex !important; align-items:center !important; gap:10px !important; color:#d1d5db !important; text-decoration:none !important; padding:10px 14px !important; border-radius:8px !important; margin-bottom:4px !important; font-size:14.5px !important; transition:all 0.2s ease !important;" onmouseover="this.style.background='#4fd1c5'; this.style.color='#0f172a';" onmouseout="this.style.background='transparent'; this.style.color='#d1d5db';"><i class="bi bi-calendar-check" style="font-size:16px !important; width:18px !important; text-align:center !important;"></i><span>Leave</span></a></li>
+
+        <li><a href="#" class="sidebar-link" style="display:flex !important; align-items:center !important; gap:10px !important; color:#d1d5db !important; text-decoration:none !important; padding:10px 14px !important; border-radius:8px !important; margin-bottom:4px !important; font-size:14.5px !important; transition:all 0.2s ease !important;" onmouseover="this.style.background='#4fd1c5'; this.style.color='#0f172a';" onmouseout="this.style.background='transparent'; this.style.color='#d1d5db';"><i class="bi bi-calendar-event" style="font-size:16px !important; width:18px !important; text-align:center !important;"></i><span>Holiday</span></a></li>
+
+        <hr class="text-secondary" style="border-color:rgba(255,255,255,0.12) !important; margin:14px 0 !important;">
+        <li class="menu-title text-white px-3 mt-2" style="color:#8b95a5 !important; font-size:11px !important; font-weight:700 !important; letter-spacing:1.2px !important; margin:10px 0 8px 4px !important; text-transform:uppercase !important;">REPORTS</li>
+
+        <li><a href="#" class="sidebar-link" style="display:flex !important; align-items:center !important; gap:10px !important; color:#d1d5db !important; text-decoration:none !important; padding:10px 14px !important; border-radius:8px !important; margin-bottom:4px !important; font-size:14.5px !important; transition:all 0.2s ease !important;" onmouseover="this.style.background='#4fd1c5'; this.style.color='#0f172a';" onmouseout="this.style.background='transparent'; this.style.color='#d1d5db';"><i class="bi bi-bar-chart" style="font-size:16px !important; width:18px !important; text-align:center !important;"></i><span>Daily Report</span></a></li>
+
+        <li><a href="#" class="sidebar-link" style="display:flex !important; align-items:center !important; gap:10px !important; color:#d1d5db !important; text-decoration:none !important; padding:10px 14px !important; border-radius:8px !important; margin-bottom:4px !important; font-size:14.5px !important; transition:all 0.2s ease !important;" onmouseover="this.style.background='#4fd1c5'; this.style.color='#0f172a';" onmouseout="this.style.background='transparent'; this.style.color='#d1d5db';"><i class="bi bi-calendar2-month" style="font-size:16px !important; width:18px !important; text-align:center !important;"></i><span>Monthly Report</span></a></li>
+
+        <li><a href="#" class="sidebar-link" style="display:flex !important; align-items:center !important; gap:10px !important; color:#d1d5db !important; text-decoration:none !important; padding:10px 14px !important; border-radius:8px !important; margin-bottom:4px !important; font-size:14.5px !important; transition:all 0.2s ease !important;" onmouseover="this.style.background='#4fd1c5'; this.style.color='#0f172a';" onmouseout="this.style.background='transparent'; this.style.color='#d1d5db';"><i class="bi bi-exclamation-triangle" style="font-size:16px !important; width:18px !important; text-align:center !important;"></i><span>Late Report</span></a></li>
+
+        <hr class="text-secondary" style="border-color:rgba(255,255,255,0.12) !important; margin:14px 0 !important;">
+
+        <li><a href="#" class="sidebar-link" style="display:flex !important; align-items:center !important; gap:10px !important; color:#d1d5db !important; text-decoration:none !important; padding:10px 14px !important; border-radius:8px !important; margin-bottom:4px !important; font-size:14.5px !important; transition:all 0.2s ease !important;" onmouseover="this.style.background='#4fd1c5'; this.style.color='#0f172a';" onmouseout="this.style.background='transparent'; this.style.color='#d1d5db';"><i class="bi bi-gear" style="font-size:16px !important; width:18px !important; text-align:center !important;"></i><span>Settings</span></a></li>
+
         <li>
-            <a href="#" class="sidebar-link text-danger logout-link">
-                <i class="bi bi-box-arrow-right"></i>
+            <a href="#" class="sidebar-link text-danger logout-link"
+               style="display:flex !important; align-items:center !important; gap:10px !important; color:#f87171 !important; text-decoration:none !important; padding:10px 14px !important; border-radius:8px !important; font-size:14.5px !important; margin-top:6px !important; transition:all 0.2s ease !important;"
+               onmouseover="this.style.background='#f87171'; this.style.color='#ffffff';"
+               onmouseout="this.style.background='transparent'; this.style.color='#f87171';">
+                <i class="bi bi-box-arrow-right" style="font-size:16px !important; width:18px !important; text-align:center !important;"></i>
                 <span>Logout</span>
             </a>
         </li>
