@@ -13,6 +13,7 @@ use App\Http\Controllers\LeaveTypeController;
 use App\Http\Controllers\LeaveController;
 use App\Http\Controllers\PayrollController;
 use App\Http\Controllers\LoanCategoryController;
+use App\Http\Controllers\EmployeeLoanController;
 
  
  
@@ -29,8 +30,10 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('designation', DesignationController::class);
     Route::resource('employee', EmployeeController::class);
 
-    //loan modules 
-    Route::resource('loan/category', LoanCategoryController::class);
+    Route::prefix('loan')->group(function () {
+        Route::resource('category', LoanCategoryController::class);
+        Route::resource('employee-loan', EmployeeLoanController::class);
+    });
 
     // Route::get('/attendance', [AttendanceController::class, 'index'])->name('attendance.index');
 
