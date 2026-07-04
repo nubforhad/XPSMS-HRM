@@ -45,6 +45,12 @@ class LoanCategoryController extends Controller
             ->with('success', 'Loan Category Updated Successfully');
     }
 
+    public function show($id)
+    {
+        $category = LoanCategory::findOrFail($id);
+        return view('loan.category.show', compact('category'));
+    }
+
     public function destroy($id)
     {
         LoanCategory::findOrFail($id)->delete();

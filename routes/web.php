@@ -12,6 +12,7 @@ use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\LeaveTypeController;
 use App\Http\Controllers\LeaveController;
 use App\Http\Controllers\PayrollController;
+use App\Http\Controllers\LoanCategoryController;
 
  
  
@@ -27,6 +28,9 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('department', DepartmentController::class);
     Route::resource('designation', DesignationController::class);
     Route::resource('employee', EmployeeController::class);
+
+    //loan modules 
+    Route::resource('loan/category', LoanCategoryController::class);
 
     // Route::get('/attendance', [AttendanceController::class, 'index'])->name('attendance.index');
 
