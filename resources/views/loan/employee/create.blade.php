@@ -6,7 +6,7 @@
 
     <h4>Apply Employee Loan</h4>
 
-    <form method="POST" action="{{ route('loan.employee-loan.store') }}">
+    <form method="POST" action="{{ route('employee-loan.store') }}">
         @csrf
 
         <div class="mb-2">
@@ -45,7 +45,7 @@
         </div>
 
         <button class="btn btn-success">Submit</button>
-        <a href="{{ route('loan.employee-loan.index') }}" class="btn btn-secondary">Back</a>
+        <a href="{{ route('employee-loan.index') }}" class="btn btn-secondary">Back</a>
 
     </form>
 

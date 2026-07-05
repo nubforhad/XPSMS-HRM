@@ -6,7 +6,7 @@
 
     <h4>Edit Employee Loan</h4>
 
-    <form method="POST" action="{{ route('loan.employee-loan.update', $loan->id) }}">
+    <form method="POST" action="{{ route('employee-loan.update', $loan->id) }}">
         @csrf
         @method('PUT')
 
@@ -54,7 +54,7 @@
         </div>
 
         <button class="btn btn-primary">Update</button>
-        <a href="{{ route('loan.employee-loan.index') }}" class="btn btn-secondary">Back</a>
+        <a href="{{ route('employee-loan.index') }}" class="btn btn-secondary">Back</a>
 
     </form>
 

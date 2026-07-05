@@ -32,7 +32,7 @@
 
             <p><strong>Reason:</strong> {{ $loan->reason }}</p>
 
-            <a href="{{ route('loan.employee-loan.index') }}" class="btn btn-secondary">Back</a>
+            <a href="{{ route('employee-loan.index') }}" class="btn btn-secondary">Back</a>
 
         </div>
     </div>

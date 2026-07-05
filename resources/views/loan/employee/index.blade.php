@@ -6,7 +6,7 @@
 
     <div class="d-flex justify-content-between mb-3">
         <h4>Employee Loans</h4>
-        <a href="{{ route('loan.employee-loan.create') }}" class="btn btn-primary">+ Apply Loan</a>
+        <a href="{{ route('employee-loan.create') }}" class="btn btn-primary">+ Apply Loan</a>
     </div>
 
     @if(session('success'))
@@ -54,10 +54,10 @@
                     </td>
 
                     <td>
-                        <a href="{{ route('loan.employee-loan.show', $loan->id) }}" class="btn btn-sm btn-info">View</a>
-                        <a href="{{ route('loan.employee-loan.edit', $loan->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                        <a href="{{ route('employee-loan.show', $loan->id) }}" class="btn btn-sm btn-info">View</a>
+                        <a href="{{ route('employee-loan.edit', $loan->id) }}" class="btn btn-sm btn-primary">Edit</a>
 
-                        <form action="{{ route('loan.employee-loan.destroy', $loan->id) }}" method="POST" style="display:inline;">
+                        <form action="{{ route('employee-loan.destroy', $loan->id) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-sm btn-danger">Delete</button>
